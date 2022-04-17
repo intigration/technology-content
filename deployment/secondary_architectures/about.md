@@ -8,6 +8,7 @@ order: 1
 ---
 
 # Secondary Architectures
+
 In Fedora, we call s390(x), PowerPC and ARMv8 architectures as [Secondary Architectures](https://fedoraproject.org/wiki/Architectures#Secondary_Architectures). These are either not easily accessible or newly introduced as compared to [Primary Acrhitectures](https://fedoraproject.org/wiki/Architectures#Secondary_Architectures)
 
 ## Benefits
@@ -59,6 +60,7 @@ $ cp iprutils.spec ~/rpmbuild/SOURCES/
 $ rpmbuild -bs ~/rpmbuild/SOURCES/iprutils.spec
 
 ```
+
 Generated srpm will be available in ~/rpmbuild/SRPMS/ directory
 
 **Note:** iprutils package which is used as an example may get updated later on and hence content may change.

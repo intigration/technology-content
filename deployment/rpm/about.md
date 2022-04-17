@@ -12,23 +12,23 @@ description: >
 
 Biggest advantages of packaging your application is:
 
- * it puts together code, data, config files and post-installations scripts.
- * the package can be signed, therefore clients can verify that the package was not altered.
- * it standardize installation paths.
- * it describes requirements, which are automatically resolved by system.
- * it allows easy installation/upgrade/removal of your application.
+* it puts together code, data, config files and post-installations scripts.
+* the package can be signed, therefore clients can verify that the package was not altered.
+* it standardize installation paths.
+* it describes requirements, which are automatically resolved by system.
+* it allows easy installation/upgrade/removal of your application.
 
 ## Setup
 
 Run:
 
 ```bash
-$ sudo dnf install fedora-packager rpmdevtools gcc
-$ rpmdev-setuptree
-$ cd ~/rpmbuild/SOURCES
-$ wget http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
-$ cd ~/rpmbuild/SPECS
-$ rpmdev-newspec --macros hello.spec
+sudo dnf install fedora-packager rpmdevtools gcc
+rpmdev-setuptree
+cd ~/rpmbuild/SOURCES
+wget http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+cd ~/rpmbuild/SPECS
+rpmdev-newspec --macros hello.spec
 ```
 
 ## Quick Start Guide
@@ -89,20 +89,18 @@ fi
 Once you are done, you can run:
 
 ```bash
-$ rpmbuild -ba hello.spec
+rpmbuild -ba hello.spec
 ```
 
 Your package should be ready at `~/rpmbuild/RPMS/x86_64/hello-2.10-1.fc27.x86_64.rpm`.
 
 This example is taken from [How to create a GNU Hello RPM package](https://fedoraproject.org/wiki/How_to_create_a_GNU_Hello_RPM_package). You can follow it there.
 
-
 ### Resources
 
 You can learn more about all sections and tags of SPEC file at [Fedora documentation "How to create an RPM package"](https://fedoraproject.org/wiki/How_to_create_an_RPM_package) or at [RPM Packaging Guide](https://rpm-packaging-guide.github.io/).
 
 If you prefer video over wiki, you can check recording of [Packaging Workshop](http://youtu.be/H4vxkuoimzc) at YouTube. Red Hat subscribers can check [Getting Started with RPMs](https://access.redhat.com/videos/214983) video.
-
 
 ## Packaging for other distribution
 
@@ -113,9 +111,9 @@ Command rpmbuild creates package only for architecture and distribution of your 
 Run:
 
 ```bash
-$ sudo dnf install mock mock-scm
-$ sudo usermod -a -G mock YourUserName
-$ newgrp mock
+sudo dnf install mock mock-scm
+sudo usermod -a -G mock YourUserName
+newgrp mock
 ```
 
 ### Building package using Mock
@@ -123,13 +121,13 @@ $ newgrp mock
 Before you start using Mock, you have to have SRC.RPM (also called SRPM). You can create it using rpmbuild:
 
 ```bash
-$ rpmbuild -bs hello.spec
+rpmbuild -bs hello.spec
 ```
 
 Then you can run:
 
 ```bash
-$ mock -r /etc/mock/epel-6-i386.cfg ~/rpmbuild/SRPMS/hello-2.10-1.fc27.src.rpm
+mock -r /etc/mock/epel-6-i386.cfg ~/rpmbuild/SRPMS/hello-2.10-1.fc27.src.rpm
 ```
 
 This creates CentOS/RHEL package for i386 architecture even when your workstation architecture is x86_64 and your workstation is e.g. Fedora. List of available configurations can be found at `/etc/mock/` directory.
@@ -137,7 +135,7 @@ This creates CentOS/RHEL package for i386 architecture even when your workstatio
 You can create RPM directly from git (or any other SCM) using mock-scm plugin. Just try:
 
 ```bash
-$ mock -r fedora-22-x86_64 --scm-enable --scm-option method=git --scm-option package=PKG --scm-option git_get=set --scm-option spec=YOUR.SPEC --scm-option branch=master --scm-option write_tar=True --scm-option git_get='git clone git@git_ip_address:SCM_PKG.git SCM_PKG'
+mock -r fedora-22-x86_64 --scm-enable --scm-option method=git --scm-option package=PKG --scm-option git_get=set --scm-option spec=YOUR.SPEC --scm-option branch=master --scm-option write_tar=True --scm-option git_get='git clone git@git_ip_address:SCM_PKG.git SCM_PKG'
 ```
 
 You can find more details in [mock-scm documentation](https://fedoraproject.org/wiki/Projects/Mock/Plugin/Scm).
@@ -149,9 +147,9 @@ More detailed tutorial can be found on page [Using Mock to test package builds](
 Once you have your RPM packages ready, you can put them in a directory (one directory per distribution-architecture) and run there:
 
 ```bash
-$ sudo dnf install createrepo_c
-$ cd where_are_your_packages/
-$ createrepo_c --deltas --retain-old-md 1 ./
+sudo dnf install createrepo_c
+cd where_are_your_packages/
+createrepo_c --deltas --retain-old-md 1 ./
 ```
 
 This will create Yum/Dnf repository. When you expose it to web and provide a link to it to users, they can use it as baseurl in a repo file (stored in /etc/yum.repos.d/), like:

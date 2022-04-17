@@ -31,7 +31,7 @@ The quickest way to try out OpenShift on your own computer is using the `oc clus
 First, install the dependencies. We'll need [Docker](/tools/docker/docker-installation.html) and the `origin-clients` that provides the `oc` binary.
 
 ```console
-$ sudo dnf install origin-clients docker
+sudo dnf install origin-clients docker
 ```
 
 *Note*: we recommend following the steps in the [Docker installation page](/tools/docker/docker-installation.html#why-cant-i-use-docker-command-as-a-non-root-user-by-default) to add your user to the `docker` group, so that you can run the `docker` command without `sudo`.
@@ -73,7 +73,7 @@ registries = ['172.30.0.0/16']
 Then, restart the Docker daemon:
 
 ```console
-$ sudo systemctl restart docker
+sudo systemctl restart docker
 ```
 
 And let's run `oc cluster up` again:
@@ -168,10 +168,10 @@ For more information, consult the [References](#references) below.
 ## References
 
 * [Official Documentation](https://docs.openshift.org/latest/welcome/)
-    * [OpenShift Web Console Walkthrough](https://docs.openshift.org/latest/getting_started/developers_console.html)
-    * [OpenShift Command Line Walkthrough](https://docs.openshift.org/latest/getting_started/developers_cli.html)
+  * [OpenShift Web Console Walkthrough](https://docs.openshift.org/latest/getting_started/developers_console.html)
+  * [OpenShift Command Line Walkthrough](https://docs.openshift.org/latest/getting_started/developers_cli.html)
 * [Upstream GitHub repository](https://github.com/openshift/origin)
 * [`oc cluster` command documentation](https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md)
 * [OpenShift Online Documentation](https://docs.openshift.com/online/welcome/index.html)
-    * [OpenShift Online: Basic Walkthrough](https://docs.openshift.com/online/getting_started/basic_walkthrough.html)
-    * [OpenShift Online: Command Line Setup](https://docs.openshift.com/online/cli_reference/get_started_cli.html#basic-setup-and-login)
+  * [OpenShift Online: Basic Walkthrough](https://docs.openshift.com/online/getting_started/basic_walkthrough.html)
+  * [OpenShift Online: Command Line Setup](https://docs.openshift.com/online/cli_reference/get_started_cli.html#basic-setup-and-login)

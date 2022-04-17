@@ -20,7 +20,7 @@ requirements. The script probes the system for important information about the c
 To install [GNU build system](https://en.wikipedia.org/wiki/GNU_build_system), also known as Autotools, you need to install autoconf and automake packages:
 
 ```
-$ sudo dnf install autoconf automake
+sudo dnf install autoconf automake
 ```
 
 ## Autotools usage
@@ -32,7 +32,7 @@ You can find instructions about how to create these files in info page of `autoc
 When these files are ready, one simple command creates everything you need to distribute your project:
 
 ```
-$ autoreconf --install
+autoreconf --install
 ```
 
 This command will produce several files: `configure` script, `config.h.in` and `Makefile.in` in every directory. The two latter are then used
@@ -40,13 +40,13 @@ by configure script to produce actual Makefiles. Now your project is ready to be
 package. Now when someone wants to use your package she only needs to type:
 
 ```
-$ ./configure
+./configure
 ```
 
 This command will produce `Makefile` in every directory and `config.h` in the main directory. Now simply type:
 
 ```
-$ make
+make
 ```
 
 Now all important parts of project are compiled and linked and the program is ready to be used.
@@ -54,7 +54,7 @@ Note that this tutorial is very short and describes only absolute basics of GNU 
 If you want to use `automake` in your project try reading the manual page:
 
 ```
-$ man automake
+man automake
 ```
 
 If you need more detailed explanation of GNU build system and some simple examples of usage,
@@ -62,5 +62,5 @@ try this [guide to Autotools](http://www.freesoftwaremagazine.com/books/autotool
 or info page:
 
 ```
-$ info automake
+info automake
 ```

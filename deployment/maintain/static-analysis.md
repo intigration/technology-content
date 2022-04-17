@@ -5,6 +5,7 @@ order: 4
 ---
 
 # Static Analysis
+
 Static analysis is a technique of analyzing programs without executing them.
 It is often used in compilers for code optimizations and producing warnings.
 We have several static analyzers in Fedora that can be used to automatically
@@ -24,6 +25,7 @@ shell scripts, or [Pylint](http://www.pylint.org/), which analyzes programs
 written in Python.
 
 ## Using csbuild to analyze C/C++ programs
+
 In order to make it easier to use static analyzers by C/C++ developers, there
 is a utility named ```csbuild``` that runs static analyzers in background fully
 transparently.  You can install csbuild by dnf, which will also pull the needed
@@ -38,12 +40,14 @@ Its usage is as easy as:
 ```
 csbuild -c 'make ...'
 ```
+
 ... where you replace ```make ...``` by the actual command you use to compile
 your project.  By running the above command, you will get extended diagnostic
 produced by GCC and the output of Cppcheck and Clang analyzers for the modules
 that were (re)compiled during the build.
 
 ## Differential scans
+
 If your project is tracked in a git repository, you can use csbuild for
 differential scans to check for added (or fixed) bugs between a pair of git
 revisions.  For example, before you push your commits in the master branch of
@@ -68,6 +72,7 @@ search in 1024 commits, only 10 builds are needed.  For these options to work,
 you need to use a build command that fully rebuilds all sources.
 
 ## Travis CI and static analysis
+
 [Travis CI](https://travis-ci.org/) is a freely avilable CI (Continuous
 Integration) service, which is integrated with [GitHub](https://github.com/).
 If you have a repository on GitHub, you can configure Travis CI to run a series

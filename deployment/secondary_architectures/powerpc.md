@@ -6,9 +6,11 @@ order: 2
 ---
 
 # PowerPC
+
 [PowerPC](https://en.wikipedia.org/wiki/PowerPC) is 32 or 64 bit instruction set architetcure and mainly used in video game consoles and embedded applications. From Fedora 22, support for 32 bit PowerPC machines have been dropped and only 64 bit machines are supported.
 
 ## Endianness
+
 PowerPC supports both little and big endian modes and can even switch from one mode to the other at run-time. In Fedora, Power5 and newer 64 bit machines are supported in big endianness mode and are commonly referred as ppc64. In little endian mode, 64 bit Power8 machines are supported and referred as ppc64le.
 
 ## Building your application for PowerPC
@@ -46,14 +48,15 @@ $ ppc-koji build --scratch rawhide iprutils-2.4.11.1-1.fc25.src.rpm
   ....
 
 ```
+
 For each build, a Task ID is created in ppc koji. You can see build status and it's log by going to the url provided in Task info.
 
 ## Viewing koji builds
 
 Builds specific to ppc64(le) are hosted at [http://ppc.koji.fedoraproject.org/](http://ppc.koji.fedoraproject.org/). UI is very similar to [primary koji](http://koji.fedoraproject.org/).
 
-
 ## Reaching out for help
+
 If you face any difficulty reach out to us for help:
 
 - On libera IRC channel [#fedora-ppc](https://web.libera.chat/?channels=#fedora-ppc)
@@ -63,6 +66,3 @@ If you face any difficulty reach out to us for help:
 ## More documentation
 
 - More Fedora PowerPC specific details cane be found at [fedoraproject wiki](https://fedoraproject.org/wiki/Architectures/PowerPC)
-
-
-
