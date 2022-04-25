@@ -1,7 +1,8 @@
 ---
-layout: contributing
-page_menu_hl: fork
-section: contributing
+title: Fork
+subsection: contributing
+section: contributing-contributing
+order: 1
 ---
 
 # **1.** Fork

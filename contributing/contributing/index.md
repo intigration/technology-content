@@ -1,11 +1,14 @@
 ---
-layout: contributing
-page_menu_hl: home
-section: contributing
+title: Home
+layout: content
+subsection: contributing
+section: contributing-contributing
+
+order: 1
 ---
 
 # Contributing
-Fedora Developer Portal is a community effort to share guides and information about open-source development. And we need your help!
+Developer Portal is a effort to share guides and information about development. And we need your help!
 
 ## Contribution process
 

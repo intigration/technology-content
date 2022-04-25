@@ -1,8 +1,10 @@
 ---
-layout: contributing
-page_menu_hl: pull-request
-section: contributing
+title: Pull Request
+subsection: contributing
+section: contributing-contributing
+order: 1
 ---
+
 
 # **3.** Pull request
 

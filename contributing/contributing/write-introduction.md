@@ -2,7 +2,7 @@
 layout: contributing
 page_menu_hl: write
 page_submenu_hl: introduction
-section: contributing
+section: contributing-contributing
 ---
 
 # **2.** Write

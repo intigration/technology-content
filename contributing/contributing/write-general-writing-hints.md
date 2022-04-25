@@ -1,9 +1,11 @@
 ---
-layout: contributing
-page_menu_hl: write
-page_submenu_hl: hints
-section: contributing
+title: General Hints
+layout: content
+subsection: contributing
+section: contributing-contributing
+order: 1
 ---
+
 
 
 # General writing hints

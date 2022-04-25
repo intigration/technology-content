@@ -1,9 +1,10 @@
 ---
-layout: contributing
-page_menu_hl: write
-page_submenu_hl: edit
-section: contributing
+title: Edit and Preview
+subsection: contributing
+section: contributing-contributing
+order: 1
 ---
+
 
 # Edit and preview
 
