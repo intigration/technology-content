@@ -1,7 +1,7 @@
 ---
 title: Cloud
 subsection: cloud
-section: layer
+section: start-layer
 description: In-memory data structure store, used as a database, cache and message broker
 ---
 
@@ -14,14 +14,14 @@ Cloud is a free and open source in memory data structure store. It is widely use
 To install Redis on Fedora, run the following commands:
 
 ```console
-$ sudo dnf install redis     # Install redis cli and server
-$ sudo systemctl start redis # Initialize redis server
+sudo dnf install redis     # Install redis cli and server
+sudo systemctl start redis # Initialize redis server
 ```
 
 To start redis on boot, run
 
 ```console
-$ sudo systemctl enable redis
+sudo systemctl enable redis
 ```
 
 To test redis-cli, run
@@ -36,13 +36,13 @@ pong
 The config file for Redis is located at `/etc/redis/redis.conf`.
 
 ```console
-$ sudo nano /etc/redis/redis.conf
+sudo nano /etc/redis/redis.conf
 ```
 
 Redis should be always restarted after changing settings. Restart redis by running
 
 ```console
-$ sudo systemctl restart redis
+sudo systemctl restart redis
 ```
 
 Secure redis by enabling authentication. Add this line in `/etc/redis/redis.conf`
